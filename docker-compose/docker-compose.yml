@@ -1,0 +1,17 @@
+version: "3.0"
+services:
+  db:
+    image: mysql
+    environment:
+      - MYSQL_DATABASE=apirest
+      - MYSQL_USER=root
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+    volumes:
+      - /home/user/kubernetes/volumes:/var/lib/mysql
+
+  web:
+    image: julioohhhh/apirest:v1
+    ports:
+      - 8080:80
+    depends_on:
+      - db
