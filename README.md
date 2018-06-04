@@ -1,4 +1,4 @@
-	A minha ideia de implementação principal é que a aplicação rode em um ambiente AWS ECS, onde o build e deploy seja feito
+A minha ideia de implementação principal é que a aplicação rode em um ambiente AWS ECS, onde o build e deploy seja feito
 via Jenkins, com os parâmetros informados na execução do job.
 	O Jenkins clonaria o ambiente através deste repositório do Github, faria o build e deploy através do script "build-and-deploy.sh".
 No build seria construído o pacote da aplicação via comandos maven, após isso seria feito o build da imagem docker e adicionado o pacote da aplicação (.jar), após isso a imagem seria enviada para algum repositório, que pode ser um repositório ECS ou Docker hub por exemplo.
