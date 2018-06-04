@@ -1,0 +1,21 @@
+{
+  "family": "TASK_NAME",
+  "containerDefinitions": [
+    {
+      "memoryReservation": MEMORY_RESERVATION,
+      "name": "CONTAINER_NAME",
+      "mountPoints": [],
+      "image": "IMAGE_REPOSITORY",
+      "cpu": CPU_UNITY,
+      "portMappings": [
+          {
+              "protocol": "tcp",
+              "containerPort": 8080,
+              "hostPort": HOST_PORT
+          }
+      ],
+      "essential": true,
+      "volumesFrom": []
+    }
+  ]
+}

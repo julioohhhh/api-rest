@@ -1,0 +1,5 @@
+FROM openjdk:8u121-jre-alpine
+MAINTAINER "Julio Alves" <julio.souza@ymail.com>
+VOLUME /tmp
+ADD deploy.jar deploy.jar
+ENTRYPOINT [ "sh", "-c", "java -jar /deploy.jar ]
